@@ -15,7 +15,7 @@ See [an example in another project](https://github.com/patreeceeo/zomboban/blob/
 
 ### API
 
-You can't really do OOP in POSIX Shell. Instead, we use functions in the form of a "wm_<object>_new_*" that creates an <object> and returns its UUID. We can then use this UUID to perform further actions with this object.
+You can't really do OOP in POSIX Shell. Instead, we use functions in the form of a "wm\_&lt;object&gt;\_new\_*" that creates an <object> and returns its UUID. We can then use this UUID to perform further actions with this object.
 
 #### Sessions
 ##### New
