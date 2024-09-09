@@ -21,7 +21,7 @@ wm_session_active_pane() {
 }
 
 wm_pane_split() {
-  tmux split-window "-$1" "$2"
+  tmux split-window "-$1P" "$2"
 }
 
 wm_pane_select() {
