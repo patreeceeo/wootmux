@@ -11,6 +11,8 @@ curl https://raw.githubusercontent.com/patreeceeo/wootmux/main/wootmux.sh > woot
 
 ### Usage
 
-See dev.sh included in this repo. WOOT! 🐶
+See [an example in another project](https://github.com/patreeceeo/zomboban/blob/main/dev.sh) or this project's own dev.sh.
+
+WOOT!
 
 
