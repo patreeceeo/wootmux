@@ -9,8 +9,8 @@ if [ "$(wm_session_exists wootmux)" ]; then
   exit 0
 fi
 
-wm_session_new repeet_code
+wm_session_new wootmux
 
 wm_pane_new_left "$(wm_session_active_pane)" nvim
 
-wm_session_attach repeet_code
+wm_session_attach wootmux
