@@ -1,7 +1,7 @@
 # wootmux
 ## Wanted: Object-Oriented Tmux
 
-A simple tmux wrapper that tries to be Object Oriented.
+A simple tmux wrapper that tries to be Object Oriented. [Read more about the idea of OOP and tmux in this blog post](https://innerlogic.co/2024/09/10/taking-the-hell-out-of-shell-making-tmux-object-oriented/).
 
 ### installion
 
