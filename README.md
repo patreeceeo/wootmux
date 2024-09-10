@@ -52,7 +52,7 @@ wm_session_kill "$my_session_name_or_id" # it's gone
 ##### new_&lt;direction&gt;
 
 ```
-wm_pane_new_left $my_pane_id # Split window containing $my_pane_id such that the new pane is to the left
+wm_pane_new_left "$my_pane_id" # Split window containing $my_pane_id such that the new pane is to the left
 ```
 
 ### WOOT!
