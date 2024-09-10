@@ -26,10 +26,11 @@ __list_get_item() {
 
 wm_session_new () {
   tmux new-session -s "$1" -d
-
-  tmux bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -i -f -selection primary | xclip -i -selection clipboard"
-
   tmux display-message -p -t "$1" "#{session_id}"
+}
+
+wm_use_clipboard () {
+  tmux bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -i -f -selection primary | xclip -i -selection clipboard"
 }
 
 wm_session_exists () {
