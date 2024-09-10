@@ -13,22 +13,46 @@ curl https://raw.githubusercontent.com/patreeceeo/wootmux/main/wootmux.sh > woot
 
 See [an example in another project](https://github.com/patreeceeo/zomboban/blob/main/dev.sh) or this project's own dev.sh.
 
-### API
+### Public API
 
-You can't really do OOP in POSIX Shell. Instead, we use functions in the form of a "wm\_&lt;object&gt;\_new\_*" that creates an <object> and returns its UUID. We can then use this UUID to perform further actions with this object.
+You can't really do OOP in POSIX Shell. Instead, we use functions in the form of "wm\_&lt;object&gt;\_new" or "wm\_&lt;object&gt;\_new\_<modifier>" that creates an <object> and returns its UUID. We can then use this UUID to perform further actions with this object.
 
-#### Sessions
-##### New
+#### Session
+##### new
 
 ```sh
 my_session_id=$(wm_session_new "my_session") # Creates a session named my_session and assigns its UUID to my_session_id
-# Note: the session name ("my_session") can also be used as its UUID if we're sure it's unique.
 ```
 
-##### Attach
+##### exists?
 
 ```sh
-wm_session_attach <session_uuid> # attaches client to given session
+[ wm_session_exists "$my_session_name_or_id" ] && echo "this session exists"
+```
+
+##### attach
+
+```sh
+wm_session_attach "$my_session_name_or_id" # attaches client to given session
+```
+
+##### current
+
+```sh
+my_session_id=$(wm_session_current) # get UUID of current session
+```
+
+##### kill
+
+```sh
+wm_session_kill "$my_session_name_or_id" # it's gone
+```
+
+#### Pane
+##### new_&lt;direction&gt;
+
+```
+wm_pane_new_left "$my_pane_id" # Split window containing $my_pane_id such that the new pane is to the left
 ```
 
 ### WOOT!
