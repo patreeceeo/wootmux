@@ -9,6 +9,8 @@ if [ "$(wm_session_exists wootmux)" ]; then
   exit 0
 fi
 
+wm_use_clipboard
+
 wm_session_new wootmux
 
 wm_pane_new_left "$(wm_pane_current)" nvim
