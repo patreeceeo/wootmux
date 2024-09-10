@@ -11,6 +11,6 @@ fi
 
 wm_session_new wootmux
 
-wm_pane_new_left "$(wm_session_active_pane)" nvim
+wm_pane_new_left "$(wm_pane_current)" nvim
 
 wm_session_attach wootmux
