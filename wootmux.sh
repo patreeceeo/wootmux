@@ -2,11 +2,11 @@
 
 UUID_FORMAT_PANE="#{session_name}:#{window_id}.#{pane_id}"
 
-string_is_not_empty() {
+__string_is_not_empty() {
   [ -n "$1" ]
 }
 
-list_get_item() {
+__list_get_item() {
   string="$1"
   index="$2"
   count=0
@@ -35,7 +35,7 @@ wm_session_new () {
 wm_session_exists () {
   session_list="$(tmux list-sessions -F "#{session_id}: #{session_name}")"
   grep_result="$(echo "$session_list" | grep "$1")"
-  string_is_not_empty "$grep_result"
+  __string_is_not_empty "$grep_result"
 }
 
 ##

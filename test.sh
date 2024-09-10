@@ -51,7 +51,7 @@ test_wm_pane_uuids() {
   sid=$(create_test_session)
   pane_list="$(wm_session_list_panes "$sid")"
   # echo "pane_list=$pane_list"
-  first_pane="$(list_get_item "$pane_list" 0)"
+  first_pane="$(__list_get_item "$pane_list" 0)"
   pid1=$(wm_pane_new_left "$first_pane")
   pid2=$(wm_pane_new_right "$first_pane")
   pid3=$(wm_pane_new_above "$first_pane")
@@ -60,6 +60,8 @@ test_wm_pane_uuids() {
   assert_well_formed_pane_uuid "$pid2"
   assert_well_formed_pane_uuid "$pid3"
   assert_well_formed_pane_uuid "$pid4"
+  # TODO test that all pane UUIDs are unique
+  # TODO test that all pane UUIDs contain the session name
   destroy_test_session "$sid"
 }
 
